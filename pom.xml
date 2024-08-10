@@ -18,6 +18,7 @@
         <module>meng-admin</module>
         <module>meng-common</module>
         <module>meng-business</module>
+        <module>meng-generator</module>
     </modules>
     <properties>
         <java.version>17</java.version>
@@ -25,6 +26,7 @@
         <pagehelper.boot.version>2.1.0</pagehelper.boot.version>
         <mybatis-plus-generator>3.5.7</mybatis-plus-generator>
         <org.freemarker>2.3.33</org.freemarker>
+        <swagger.version>3.0.0</swagger.version>
     </properties>
     <dependencies>
         <!--MyBatis Plus 的依赖-->
@@ -56,7 +58,18 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <!-- Swagger3依赖 -->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${swagger.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>io.swagger</groupId>
+                    <artifactId>swagger-models</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
