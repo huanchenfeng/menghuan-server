@@ -4,10 +4,13 @@ server:
   port: 8020
 
 # PageHelper分页插件
-pagehelper:
-  helperDialect: mysql
-  supportMethodsArguments: true
-  params: count=countSql
+mybatis:
+  configuration-properties:
+    offsetAsPageNum: true
+    rowBoundsWithCount: true
+    reasonable: true
+
+
 
 # Swagger配置
 swagger:
