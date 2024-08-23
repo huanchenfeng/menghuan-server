@@ -26,7 +26,7 @@ public class CodeGenerator {
                                     .controller("controller")
                                     .pathInfo(Collections.singletonMap(OutputFile.xml, System.getProperty("user.dir")+"/meng-admin/src/main/resources/mapper")); // 设置mapperXml生成路径
                         })
-                .strategyConfig(builder -> builder.addInclude("post","tag","user","comment","category","post_tag") // 设置需要生成的表名
+                .strategyConfig(builder -> builder.addInclude("bill_type","bill") // 设置需要生成的表名
                         .controllerBuilder()
                         .enableRestStyle()//开启restful风格
                         .entityBuilder()

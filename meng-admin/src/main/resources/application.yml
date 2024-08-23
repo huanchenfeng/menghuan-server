@@ -5,6 +5,8 @@ server:
 
 # PageHelper分页插件
 mybatis:
+  type-aliases-package: com.meng.entity
+  mapper-locations: classpath:mapper/**/*.xml
   configuration-properties:
     offsetAsPageNum: true
     rowBoundsWithCount: true

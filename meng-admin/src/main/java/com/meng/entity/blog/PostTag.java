@@ -29,6 +29,6 @@ public class PostTag implements Serializable {
     private Long postId;
 
     @ApiModelProperty("标签ID，指向标签表中的ID")
-    @TableId("tag_id")
+//    @TableId("tag_id")
     private Long tagId;
 }

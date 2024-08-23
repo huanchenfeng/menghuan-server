@@ -91,13 +91,4 @@ public class HttpStatus {
      */
     public static final int WARN = 601;
 
-    /**
-     * 下游操作成功
-     */
-    public static final int BELOW_SUCCESS = 10000;
-
-    /**
-     * 下游操作失败
-     */
-    public static final int BELOW_FAIL = 10001;
 }

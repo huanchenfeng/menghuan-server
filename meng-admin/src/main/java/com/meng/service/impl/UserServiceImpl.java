@@ -1,9 +1,15 @@
 package com.meng.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.meng.core.domain.R;
+import com.meng.dto.LoginDto;
+import com.meng.dto.UserDto;
 import com.meng.entity.User;
 import com.meng.mapper.UserMapper;
 import com.meng.service.IUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.meng.vo.UserVo;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,4 +23,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 
+    @Override
+    public R login(LoginDto loginDto) {
+        String password=loginDto.getPassword();
+        String username=loginDto.getUsername();
+        User user=this.getOne(new QueryWrapper<User>().eq("username",username));
+        if (BeanUtil.isEmpty(user)||!user.getPassword().equals(password))
+            return R.warn("账号或密码错误");
+        return R.ok(user);
+    }
 }

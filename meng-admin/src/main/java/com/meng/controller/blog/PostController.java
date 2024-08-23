@@ -18,11 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/post")
 public class PostController {
-    @Autowired
-    private IPostService postService;
-    @RequestMapping("/list")
-    public R list() {
-        PageHelper.startPage(1,10);
-        return R.ok(postService.list());
-    }
+//    @Autowired
+//    private IPostService postService;
+//    @RequestMapping("/list")
+//    public R list() {
+//        PageHelper.startPage(1,10);
+//        return R.ok(postService.list());
+//    }
 }
