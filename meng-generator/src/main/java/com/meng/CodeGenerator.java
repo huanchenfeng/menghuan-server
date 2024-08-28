@@ -18,15 +18,15 @@ public class CodeGenerator {
                 )
                 .packageConfig(builder -> {
                             builder.parent("com.meng") // 设置父包名
-                                    .entity("entity")
-                                    .service("service")
-                                    .serviceImpl("service.impl")
-                                    .mapper("mapper")
+                                    .entity("entity.balance")
+                                    .service("service.balance")
+                                    .serviceImpl("service.impl.balance")
+                                    .mapper("mapper.balance")
                                     .xml("mapper.xml")
                                     .controller("controller")
-                                    .pathInfo(Collections.singletonMap(OutputFile.xml, System.getProperty("user.dir")+"/meng-admin/src/main/resources/mapper")); // 设置mapperXml生成路径
+                                    .pathInfo(Collections.singletonMap(OutputFile.xml, System.getProperty("user.dir")+"/meng-admin/src/main/resources/mapper/balance")); // 设置mapperXml生成路径
                         })
-                .strategyConfig(builder -> builder.addInclude("bill_type","bill") // 设置需要生成的表名
+                .strategyConfig(builder -> builder.addInclude("accessories") // 设置需要生成的表名
                         .controllerBuilder()
                         .enableRestStyle()//开启restful风格
                         .entityBuilder()

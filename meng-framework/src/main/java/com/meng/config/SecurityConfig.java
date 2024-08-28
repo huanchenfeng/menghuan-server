@@ -24,6 +24,7 @@ public class SecurityConfig {
                 .authorizeRequests(authorize -> authorize
                         .requestMatchers("/public/**").permitAll()
                         .requestMatchers("/user/login").permitAll()  // 放行登录请求
+                        .requestMatchers("/*").permitAll()  // 放行登录请求
                         .anyRequest().authenticated()
                 )
                 .httpBasic(withDefaults());
