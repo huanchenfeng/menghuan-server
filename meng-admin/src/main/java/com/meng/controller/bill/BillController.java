@@ -1,5 +1,8 @@
 package com.meng.controller.bill;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.meng.mapper.balance.AccessoriesMapper;
 import org.apache.http.HttpEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
@@ -8,10 +11,14 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -24,11 +31,14 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/bill")
 public class BillController {
-
+    @Autowired
+    private AccessoriesMapper accessoriesMapper;
     public static void main(String[] args) {
-        String url = "https://api.csqaq.com/api/v1/info/exchange_detail";
-        String response = sendPostRequest(url, createRequestBody());
-        System.out.println(response);
+//        String url = "https://api.csqaq.com/api/v1/info/exchange_detail";
+//        String response = sendPostRequest(url, createRequestBody());
+//        System.out.println(response);
+
+
     }
 
     private static String sendPostRequest(String url, String requestBody) {
@@ -67,4 +77,6 @@ public class BillController {
     private static String createRequestBody() {
         return "{\"page_index\": 1, \"res\": 0, \"platforms\": \"BUFF-YYYP\", \"sort_by\": 1, \"turnover\": 10, \"min_price\": 1, \"max_price\": 5000}";
     }
+
+
 }

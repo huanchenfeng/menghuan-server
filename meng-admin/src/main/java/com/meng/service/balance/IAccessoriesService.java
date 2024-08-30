@@ -3,6 +3,8 @@ package com.meng.service.balance;
 import com.meng.entity.balance.Accessories;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * 饰品信息表 服务类
@@ -13,4 +15,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface IAccessoriesService extends IService<Accessories> {
 
+    void updateAccessoriesData(int pageSum);
+
+    String dateAnalys();
 }
