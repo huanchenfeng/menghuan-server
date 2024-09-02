@@ -2,10 +2,8 @@ package com.meng.service;
 
 import com.meng.core.domain.R;
 import com.meng.dto.LoginDto;
-import com.meng.dto.UserDto;
 import com.meng.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.meng.vo.UserVo;
 
 /**
  * <p>

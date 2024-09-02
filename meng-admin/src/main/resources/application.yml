@@ -2,7 +2,10 @@
 server:
   # 服务器的HTTP端口，默认为8080
   port: 8020
-
+  quartz:
+    job-store-type: jdbc
+    properties:
+      org.quartz.threadPool.thread-count: 10
 # PageHelper分页插件
 mybatis:
   type-aliases-package: com.meng.entity

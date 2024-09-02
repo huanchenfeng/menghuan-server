@@ -1,6 +1,5 @@
 package com.meng.service.impl.balance;
 
-import cn.hutool.http.Header;
 import cn.hutool.http.HttpRequest;
 import cn.hutool.json.JSONUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -10,16 +9,8 @@ import com.meng.entity.balance.Accessories;
 import com.meng.mapper.balance.AccessoriesMapper;
 import com.meng.service.balance.IAccessoriesService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.apache.http.HttpEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EntityUtils;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;

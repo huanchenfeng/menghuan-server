@@ -20,6 +20,7 @@
         <module>meng-business</module>
         <module>meng-generator</module>
         <module>meng-framework</module>
+        <module>meng-quartz</module>
     </modules>
     <properties>
         <java.version>17</java.version>
@@ -106,6 +107,11 @@
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>1.15.1</version>
+        </dependency>
+        <!--定时器-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-quartz</artifactId>
         </dependency>
     </dependencies>
 

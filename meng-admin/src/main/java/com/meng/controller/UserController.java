@@ -1,15 +1,12 @@
 package com.meng.controller;
 
-import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.meng.core.domain.R;
 import com.meng.dto.LoginDto;
-import com.meng.dto.UserDto;
 import com.meng.entity.User;
 import com.meng.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ObjectUtils;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
